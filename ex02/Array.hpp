@@ -19,11 +19,11 @@ public:
 
 	Array(unsigned int n) : data(new T[n]), n(n) {
 		for (unsigned int i = 0; i < n; ++i) {
-			data[i] = 0;
+			data[i] = T();
 		}
 	}
 
-	Array(const Array& other) : data(new T(other.n)), n(other.n) {
+	Array(const Array& other) : data(new T[other.n]), n(other.n) {
 		for (unsigned int i = 0; i < n; ++i)
 			data[i] = other.data[i];
 	}
