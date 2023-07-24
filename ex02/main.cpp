@@ -1,11 +1,13 @@
 
 #include "Array.hpp"
 #include <iostream>
-#include <string>
 
 void test0() {
+
+	int aa = int();
+	std::cout << "aa: " << aa << '\n';
 	int* a = new int();
-	std::cout << "*a: " << *a << '\n';
+	std::cout << "*a: " << *a << "\n\n";
 	Array<int>* b = new Array<int>();
 	std::cout << "(*b)[0]: " << (*b)[0] << '\n';
 	std::cout << "b->size(): " << b->size() << '\n';
@@ -17,7 +19,7 @@ void test0() {
 	}
 	delete a;
 	delete b;
-	std::cout << "\n###################################\n\n";
+	std::cout << "\n##############################################\n\n";
 }
 
 void test1() {
@@ -43,7 +45,7 @@ void test1() {
 	} catch (std::exception& e) {
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
-	std::cout << "\n###################################\n\n";
+	std::cout << "\n##############################################\n\n";
 }
 void test2(){
 	Array<std::string> str = Array<std::string>(5);
@@ -57,7 +59,7 @@ void test2(){
 	for (unsigned int i = 0; i < str.size(); ++i) {
 		std::cout << str[i] << ", ";
 	}
-	std::cout << "\n\n============================================\n\n";
+	std::cout << "\n\n\n";
 	Array<std::string> temp = str;
 	for (unsigned int i = 0; i < str.size(); ++i) {
 		std::cout << temp[i] << ", ";
@@ -65,7 +67,7 @@ void test2(){
 	for (unsigned int i = 0; i < str.size(); ++i) {
 		temp[i] = "member";
 	}
-	std::cout << "\n\n============================================\n\n";
+	std::cout << "\n\n\n";
 	for (unsigned int i = 0; i < str.size(); ++i) {
 		std::cout << str[i] << ", ";
 	}
@@ -79,8 +81,9 @@ void test2(){
 
 int main() {
 	std::cout << "##############################################\n\n";
-//	test0();
+	test0();
 //	test1();
-	test2();
+//	test2();
+
 	return 0;
 }

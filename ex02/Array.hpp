@@ -14,7 +14,7 @@ private:
 
 public:
 
-	Array() : data(new T(0)), n(0) {
+	Array() : data(new T()), n() {
 	}
 
 	Array(unsigned int n) : data(new T[n]), n(n) {
@@ -29,6 +29,7 @@ public:
 	}
 
 	Array& operator=(const Array& other) {
+		n = other.n;
 		for (unsigned int i = 0; i < n; ++i)
 			data[i] = other.data[i];
 		return *this;
