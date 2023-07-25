@@ -1,6 +1,6 @@
 
-#ifndef CPP_HLEESA_ARRAY_HPP
-#define CPP_HLEESA_ARRAY_HPP
+#ifndef ARRAY_HPP
+#define ARRAY_HPP
 
 #include <stdexcept>
 
@@ -65,4 +65,4 @@ public:
 
 };
 
-#endif //CPP_HLEESA_ARRAY_HPP
+#endif //ARRAY_HPP

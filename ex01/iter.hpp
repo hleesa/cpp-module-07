@@ -1,6 +1,6 @@
 
-#ifndef CPP_HLEESA_ITER_HPP
-#define CPP_HLEESA_ITER_HPP
+#ifndef ITER_HPP
+#define ITER_HPP
 
 #include <iostream>
 #include <stddef.h>
@@ -34,4 +34,4 @@ void iter(const T* array, size_t size, T(* func)(const T&)) {
 }
 
 
-#endif //CPP_HLEESA_ITER_HPP
+#endif //ITER_HPP

@@ -1,6 +1,6 @@
 
-#ifndef CPP_HLEESA_MAX_HPP
-#define CPP_HLEESA_MAX_HPP
+#ifndef MAX_HPP
+#define MAX_HPP
 
 template<typename T>
 T max(const T& lhs, const T& rhs){
@@ -9,4 +9,4 @@ T max(const T& lhs, const T& rhs){
 	return rhs;
 }
 
-#endif //CPP_HLEESA_MAX_HPP
+#endif //MAX_HPP

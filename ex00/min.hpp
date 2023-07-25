@@ -1,6 +1,6 @@
 
-#ifndef CPP_HLEESA_MIN_HPP
-#define CPP_HLEESA_MIN_HPP
+#ifndef MIN_HPP
+#define MIN_HPP
 
 template<typename T>
 T min(const T& lhs, const T& rhs){
@@ -9,4 +9,4 @@ T min(const T& lhs, const T& rhs){
 	return rhs;
 }
 
-#endif //CPP_HLEESA_MIN_HPP
+#endif //MIN_HPP

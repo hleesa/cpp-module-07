@@ -1,6 +1,6 @@
 
-#ifndef CPP_HLEESA_SWAP_HPP
-#define CPP_HLEESA_SWAP_HPP
+#ifndef SWAP_HPP
+#define SWAP_HPP
 
 template<typename T>
 void swap(T& lhs, T& rhs) {
@@ -10,4 +10,4 @@ void swap(T& lhs, T& rhs) {
 	return;
 }
 
-#endif //CPP_HLEESA_SWAP_HPP
+#endif //SWAP_HPP
