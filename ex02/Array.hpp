@@ -28,9 +28,11 @@ public:
 	}
 
 	Array& operator=(const Array& other) {
-		n = other.n;
-		for (unsigned int i = 0; i < n; ++i)
-			data[i] = other.data[i];
+		if (this != &other) {
+			n = other.n;
+			for (unsigned int i = 0; i < n; ++i)
+				data[i] = other.data[i];
+		}
 		return *this;
 	}
 
