@@ -34,5 +34,6 @@ int main(void) {
 	test0();
 //	test1();
 
+//	system("leaks fewfunctions");
 	return 0;
 }

@@ -2,7 +2,6 @@
 #ifndef CPP_HLEESA_ARRAY_HPP
 #define CPP_HLEESA_ARRAY_HPP
 
-#include <cstdlib>
 #include <stdexcept>
 
 template<typename T>
@@ -14,7 +13,7 @@ private:
 
 public:
 
-	Array() : data(new T()), n() {
+	Array() : data(new T(0)), n(0) {
 	}
 
 	Array(unsigned int n) : data(new T[n]), n(n) {
@@ -48,24 +47,14 @@ public:
 
 	T& operator[](unsigned int index) {
 		if (index >= n) {
-			if (n == 0) {
-				return *this->data;
-			}
-			else {
-				throw std::out_of_range("Index out of range.");
-			}
+			throw std::out_of_range("Index out of range.");
 		}
 		return data[index];
 	}
 
 	const T& operator[](unsigned int index) const {
 		if (index >= n) {
-			if (n == 0) {
-				return *this->data;
-			}
-			else {
-				throw std::out_of_range("Index out of range.");
-			}
+			throw std::out_of_range("Index out of range.");
 		}
 		return data[index];
 	}

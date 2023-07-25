@@ -4,15 +4,16 @@
 
 void test0() {
 
-	int aa = int();
-	std::cout << "aa: " << aa << '\n';
+	int emptyArray[0];
+	std::cout << "Size of emptyArray: " << sizeof(emptyArray) << "\n\n";
+
 	int* a = new int();
 	std::cout << "*a: " << *a << "\n\n";
+
 	Array<int>* b = new Array<int>();
-	std::cout << "(*b)[0]: " << (*b)[0] << '\n';
 	std::cout << "b->size(): " << b->size() << '\n';
 	try {
-		std::cout << (*b)[100] << '\n';
+		std::cout << (*b)[1] << '\n';
 	}
 	catch (std::exception& e) {
 		std::cout << "Exception: " << e.what() << std::endl;
@@ -41,13 +42,14 @@ void test1() {
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 	try {
-		std::cout << d[d.size() + 1];
+		std::cout << d[d.size()];
 	} catch (std::exception& e) {
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 	std::cout << "\n##############################################\n\n";
 }
-void test2(){
+
+void test2() {
 	Array<std::string> str = Array<std::string>(5);
 	for (unsigned int i = 0; i < str.size(); ++i) {
 		std::cout << str[i] << ", ";
@@ -79,11 +81,21 @@ void test2(){
 	std::cout << "\n\n##############################################\n\n";
 }
 
+void test3(){
+	const Array<std::string> str = Array<std::string>(5);
+	for (unsigned int i = 0; i < str.size(); ++i) {
+		std::cout << str[i] << ", ";
+	}
+	std::cout << "\n\n##############################################\n\n";
+}
+
 int main() {
 	std::cout << "##############################################\n\n";
 	test0();
-//	test1();
-//	test2();
+	test1();
+	test2();
+	test3();
 
+//	system("leaks array");
 	return 0;
 }
